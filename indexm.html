@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>خطوتي AI – Khotwati AI | التخطيط الذكي وتنظيم الوقت</title>
+<meta name="description" content="موقع للتخطيط الذكي وتنظيم الوقت لطالبات المرحلة الثانوية">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E✨%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--p:#6d28d9;--p2:#8b5cf6;--p3:#c4b5fd;--lav:#f5f0ff;--lav2:#ede4ff;--ink:#2e1065;--mut:#6b5b95;--bd:#e3d8fb;--r:18px}
+*{box-sizing:border-box;margin:0}
+body{font-family:'Tajawal','Segoe UI',Tahoma,sans-serif;background:var(--lav);color:var(--ink);line-height:1.7;padding-bottom:84px}
+header{background:linear-gradient(135deg,#4c1d95,#7c3aed 60%,#a78bfa);color:#fff;padding:14px 18px;display:flex;align-items:center;justify-content:space-between;gap:10px}
+.logo{font-size:1.4rem;font-weight:800}.logo small{font-weight:400;opacity:.8;font-size:.8rem;margin-inline-start:6px}
+nav{position:fixed;bottom:0;inset-inline:0;z-index:20;background:#fff;border-top:1px solid var(--bd);display:flex;overflow-x:auto;padding:6px}
+nav button{flex:1;min-width:64px;border:0;background:none;font:inherit;font-size:.75rem;color:var(--mut);padding:6px 4px;border-radius:12px;cursor:pointer;transition:.2s}
+nav button span{display:block;font-size:1.3rem}
+nav button.on{background:var(--lav2);color:var(--p);font-weight:700}
+@media(min-width:900px){nav{position:sticky;top:0;bottom:auto;justify-content:center;gap:6px}nav button{flex:0 0 auto;font-size:.95rem;padding:8px 16px}nav button span{display:inline;font-size:1.1rem}body{padding-bottom:30px}}
+main{max-width:1100px;margin:0 auto;padding:18px}
+.pg{display:none}.pg.on{display:block;animation:in .3s}
+@keyframes in{from{opacity:0;transform:translateY(8px)}}
+h2{font-size:1.5rem;margin-bottom:12px}h3{font-size:1.1rem;margin-bottom:8px}
+.c{background:#fff;border:1px solid var(--bd);border-radius:var(--r);padding:18px;box-shadow:0 4px 18px #6d28d90f}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.mut{color:var(--mut)}.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}.sp{justify-content:space-between}
+.hero{background:linear-gradient(135deg,#6d28d9,#8b5cf6);color:#fff;border:0;margin-bottom:14px}
+.hero h2{font-size:1.7rem}.hero p{font-size:1.15rem;opacity:.95}
+.hero input{max-width:220px}
+input,select,textarea{font:inherit;border:1px solid var(--bd);border-radius:10px;padding:8px 10px;width:100%;background:#fff;color:var(--ink)}
+input:focus,select:focus,textarea:focus,button:focus-visible{outline:3px solid var(--p3)}
+.b{background:var(--p);color:#fff;border:0;border-radius:12px;padding:9px 16px;font:inherit;cursor:pointer;transition:.2s}
+.b:hover{transform:translateY(-2px);background:#5b21b6}.b.g{background:var(--lav2);color:var(--p);padding:6px 10px}.b.d{background:#fee2e2;color:#b91c1c;padding:6px 10px}.b.w{background:#fff;color:var(--p)}
+.ring{width:120px;height:120px;border-radius:50%;background:conic-gradient(var(--p) calc(var(--v)*1%),var(--lav2) 0);display:grid;place-items:center;flex:none}
+.ring b{background:#fff;width:92px;height:92px;border-radius:50%;display:grid;place-items:center;font-size:1.6rem}
+.bar{height:12px;background:var(--lav2);border-radius:9px;overflow:hidden}.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--p2),var(--p));border-radius:9px;transition:width .5s}
+.t{display:flex;align-items:center;gap:10px;padding:10px;border:1px solid var(--bd);border-radius:12px;margin-top:8px;background:#fff;transition:.2s}
+.t:hover{border-color:var(--p3)}.t.done .tt{text-decoration:line-through;opacity:.55}
+.t input[type=checkbox],.g input[type=checkbox]{width:22px;height:22px;accent-color:var(--p);flex:none}
+.empty{text-align:center;padding:24px;color:var(--mut);background:var(--lav);border-radius:14px;margin-top:8px}
+.wk{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+@media(min-width:1100px){.wk{grid-template-columns:repeat(7,1fr)}}
+.wd{background:#fff;border:1px solid var(--bd);border-radius:14px;padding:10px;min-height:120px}.wd.td{border:2px solid var(--p);background:#faf7ff}
+.wd h4{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+.wt{font-size:.85rem;background:var(--lav2);border-radius:9px;padding:5px 7px;margin-top:5px;cursor:pointer;display:flex;gap:5px;align-items:flex-start}
+.wt.done{opacity:.55;text-decoration:line-through}.wt.rest{background:#e0f2fe}.wt.sleep{background:#e0e7ff}.wt.fun{background:#fce7f3}
+.chip{background:var(--lav2);color:var(--p);padding:4px 12px;border-radius:99px;font-size:.9rem;border:0;font-family:inherit;cursor:pointer}.chip.on{background:var(--p);color:#fff}
+.chat{height:320px;overflow:auto;display:flex;flex-direction:column;gap:8px;padding:10px;background:var(--lav);border-radius:14px;margin-bottom:10px}
+.m{max-width:85%;padding:9px 13px;border-radius:16px}.m.u{background:var(--p);color:#fff;align-self:flex-start}.m.bt{background:#fff;color:var(--ink);border:1px solid var(--bd);align-self:flex-end}
+.pi{display:flex;gap:8px;align-items:center;padding:8px 10px;border-radius:10px;margin-top:6px;background:var(--lav2)}.pi.br{background:#ecfdf5}
+.cols{display:flex;align-items:flex-end;gap:8px;height:150px}.cols div{flex:1;text-align:center;font-size:.75rem}
+.cols .tr{height:110px;background:var(--lav2);border-radius:8px 8px 0 0;position:relative;overflow:hidden;display:flex;align-items:flex-end}.cols .tr i{display:block;width:100%;background:linear-gradient(0deg,var(--p),var(--p2))}
+.bd{display:inline-block;padding:6px 12px;border-radius:12px;background:var(--lav2);margin:4px}.bd.lock{opacity:.35;filter:grayscale(1)}
+dialog{border:0;border-radius:var(--r);padding:20px;width:min(440px,92vw);color:var(--ink);box-shadow:0 20px 60px #4c1d9566}
+dialog::backdrop{background:#2e106588}dialog label{display:block;margin-top:10px;font-weight:700;font-size:.9rem}
+.toast{position:fixed;bottom:90px;left:50%;transform:translate(-50%,30px);background:var(--ink);color:#fff;padding:10px 20px;border-radius:99px;opacity:0;transition:.3s;z-index:50;pointer-events:none}.toast.on{opacity:1;transform:translate(-50%,0)}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+@media print{header,nav,.np,dialog,.toast{display:none!important}body{background:#fff;padding:0}.pg{display:none!important}#p-week{display:block!important}.wk{grid-template-columns:repeat(7,1fr);font-size:10px}.c,.wd{box-shadow:none}main{padding:0}}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">✨ خطوتي AI<small>Khotwati AI</small></div>
+  <button class="b w" data-a="reset">🔄 إعادة ضبط البيانات</button>
+</header>
+<nav id="nav" aria-label="التنقل"></nav>
+<main>
+  <section class="pg" id="p-home"></section>
+  <section class="pg" id="p-daily"></section>
+  <section class="pg" id="p-week"></section>
+  <section class="pg" id="p-ai"></section>
+  <section class="pg" id="p-goals"></section>
+  <section class="pg" id="p-stats"></section>
+  <section class="pg" id="p-tips"></section>
+  <p class="mut np" style="text-align:center;margin-top:20px;font-size:.8rem">خطوتي AI · الإصدار 1.1</p>
+</main>
+
+<dialog id="dlg">
+  <form id="tf" method="dialog">
+    <h3 id="dt">مهمة جديدة</h3>
+    <input type="hidden" name="tid">
+    <label>اسم المهمة<input name="title" maxlength="80" placeholder="مثال: حل واجب الرياضيات"></label>
+    <div class="row"><label style="flex:1">اليوم<select name="day"></select></label><label style="flex:1">الوقت<input type="time" name="time"></label></div>
+    <div class="row"><label style="flex:1">المدة (دقيقة)<input type="number" name="dur" min="0" max="600" placeholder="45"></label>
+    <label style="flex:1">النوع<select name="cat"></select></label></div>
+    <label>الأولوية<select name="pri"></select></label>
+    <div class="row" style="margin-top:16px"><button class="b" type="submit">💾 حفظ</button><button class="b g" type="button" data-a="close">إلغاء</button></div>
+  </form>
+</dialog>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+/* ============ الإعدادات والبيانات ============ */
+const $=s=>document.querySelector(s),pad=n=>String(n).padStart(2,'0');
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const KEY='khotwati_ai_v1';
+const DAYS=['الأحد','الاثنين','الثلاثاء','الأربعاء','الخميس','الجمعة','السبت'];
+const CAT={study:['📚','دراسة'],rest:['☕','راحة'],sleep:['😴','نوم'],fun:['🎮','ترفيه']};
+const PRI={high:['عالية','#dc2626'],mid:['متوسطة','#d97706'],low:['منخفضة','#16a34a']};
+const GT={daily:'يومية',weekly:'أسبوعية',monthly:'شهرية'};
+const PAGES=[['home','🏠','الرئيسية'],['daily','✅','اليومي'],['week','📅','الأسبوعي'],['ai','🤖','المساعد'],['goals','🎯','الأهداف'],['stats','📊','الإحصائيات'],['tips','💡','نصائح']];
+const TIPS=[
+['time','قسّمي وقتك إلى فترات دراسة قصيرة (25–45 دقيقة) تتخللها استراحة 5–10 دقائق.'],
+['time','خطّطي ليومك في الليلة السابقة؛ تستيقظين وأنتِ تعرفين خطوتك الأولى.'],
+['time','ذاكري المادة الصعبة في وقت نشاطك الذهني، وغالبًا يكون في بداية اليوم.'],
+['time','قدّري مدة كل مهمة ثم أضيفي 20% وقتًا احتياطيًا للمفاجآت.'],
+['proc','ابدئي بخطوة صغيرة لا تتجاوز دقيقتين؛ البداية هي أصعب جزء.'],
+['proc','قسّمي المهمة الكبيرة إلى مهام صغيرة واضحة، وأنجزي واحدة كل مرة.'],
+['proc','أبعدي الجوال عن مكان المذاكرة أو فعّلي وضع عدم الإزعاج.'],
+['proc','كافئي نفسك بعد كل إنجاز: مشروب مفضل أو دقائق من الاستراحة.'],
+['pri','رتّبي مهامك: عاجل ومهم أولًا، ثم مهم غير عاجل، ثم باقي المهام.'],
+['pri','اختاري 3 مهام رئيسية فقط لكل يوم حتى لا تتشتتي.'],
+['pri','اسألي نفسك: ما المهمة التي لو أنجزتها اليوم سيصبح باقي اليوم أسهل؟'],
+['bal','النوم الكافي (7–9 ساعات) يرفع التركيز والذاكرة أكثر من السهر للمذاكرة.'],
+['bal','خصّصي وقتًا ثابتًا لهواياتك وأسرتك وصديقاتك؛ الراحة جزء من الخطة.'],
+['bal','اشربي الماء وتحركي كل ساعة، فالجسم النشيط يفكر بصورة أفضل.'],
+['bal','لا بأس إن لم تنجزي كل شيء؛ راجعي خطتك وعدّليها بدل أن تلومي نفسك.']];
+const TCAT={all:'الكل',time:'إدارة الوقت',proc:'التسويف',pri:'الأولويات',bal:'التوازن'};
+const blank=()=>({name:'',tasks:[],goals:[],log:[],chat:[],plan:null});
+let S=blank();
+try{S={...blank(),...JSON.parse(localStorage.getItem(KEY)||'{}')}}catch(e){}
+const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}};
+const uid=()=>Date.now().toString(36)+Math.random().toString(36).slice(2,6);
+const TD=()=>new Date().getDay();
+const pct=(a,b)=>b?Math.round(a/b*100):0;
+const toMin=t=>{const[a,b]=(t||'00:00').split(':');return +a*60+ +b};
+const fm=m=>pad(Math.floor(m/60)%24)+':'+pad(m%60);
+const dstr=d=>new Date(d).toLocaleDateString('ar-u-ca-gregory',{weekday:'long',day:'numeric',month:'long'});
+const byTime=(a,b)=>(a.time||'99:99').localeCompare(b.time||'99:99');
+let tipCat='all',tipIdx=Math.floor(Math.random()*TIPS.length),fl='all';
+function toast(m){const t=$('#toast');t.textContent=m;t.classList.add('on');clearTimeout(toast.h);toast.h=setTimeout(()=>t.classList.remove('on'),2200)}
+
+/* ============ مكونات مشتركة ============ */
+function row(t,showDay){return `<div class="t ${t.done?'done':''}"><input type="checkbox" ${t.done?'checked':''} data-a="tog" data-id="${t.id}" aria-label="تم الإنجاز"><div style="flex:1"><div class="tt">${CAT[t.cat][0]} ${esc(t.title)}</div><small class="mut">${showDay?DAYS[t.day]+' · ':''}${t.time?'🕒 '+t.time:'بدون وقت'}${t.dur?' · '+t.dur+' د':''} · <span style="color:${PRI[t.pri][1]}">● ${PRI[t.pri][0]}</span></small></div><button class="b g" data-a="edit" data-id="${t.id}" title="تعديل">✏️</button><button class="b d" data-a="del" data-id="${t.id}" title="حذف">🗑️</button></div>`}
+const bar=v=>`<div class="bar"><i style="width:${v}%"></i></div>`;
+const todayTasks=()=>S.tasks.filter(t=>t.day==TD()).sort(byTime);
+
+/* ============ الصفحة الرئيسية ============ */
+function renderHome(){
+  const h=new Date().getHours(),g=h<12?'صباح الخير':h<18?'مساء الخير':'مساء النور';
+  const td=todayTasks(),dn=td.filter(t=>t.done).length,p=pct(dn,td.length),nx=td.filter(t=>!t.done).slice(0,4);
+  const tip=TIPS[tipIdx%TIPS.length][1];
+  $('#p-home').innerHTML=`<div class="c hero"><h2>${g}${S.name?' يا '+esc(S.name):''} 🌸</h2><p>خطّط بذكاء، أنجز بثقة، واصنع وقتك.</p>
+  ${S.name?'':`<div class="row" style="margin-top:12px"><input id="nm" placeholder="ما اسمك؟" maxlength="25"><button class="b w" data-a="name">حفظ الاسم</button></div>`}</div>
+  <div class="grid"><div class="c"><h3>📌 ملخص مهام اليوم</h3><div class="row"><div class="ring" style="--v:${p}"><b>${p}%</b></div><div><p>${DAYS[TD()]}</p><p><b>${dn}</b> من <b>${td.length}</b> مهام مكتملة</p><p class="mut">${td.length?(p==100?'ممتاز! أنجزتِ كل مهامك 🎉':'استمري، أنتِ تتقدمين!'):'لا توجد مهام لليوم بعد.'}</p></div></div></div>
+  <div class="c"><h3>⏭️ المهام القادمة</h3>${nx.length?nx.map(t=>row(t)).join(''):'<div class="empty">لا مهام متبقية. أضيفي مهمة أو اطلبي جدولًا من المساعد.</div>'}</div>
+  <div class="c"><h3>💡 نصيحة اليوم</h3><p>${tip}</p><div class="row" style="margin-top:10px"><button class="b g" data-a="tip">نصيحة أخرى 🔄</button></div></div>
+  <div class="c"><h3>🚀 ابدئي الآن</h3><div class="row"><button class="b" data-a="add">➕ مهمة جديدة</button><button class="b g" data-a="go" data-id="ai">🤖 المساعد الذكي</button><button class="b g" data-a="go" data-id="goals">🎯 أهدافي</button></div></div></div>`}
+
+/* ============ التخطيط اليومي ============ */
+function renderDaily(){
+  let td=todayTasks();const all=td,dn=all.filter(t=>t.done).length;
+  if(fl=='open')td=td.filter(t=>!t.done);if(fl=='done')td=td.filter(t=>t.done);
+  $('#p-daily').innerHTML=`<h2>✅ التخطيط اليومي</h2><div class="c"><div class="row sp"><div><b>${DAYS[TD()]}</b> <span class="mut">${dstr(Date.now())}</span></div><button class="b" data-a="add">➕ إضافة مهمة</button></div>
+  <div style="margin:12px 0">${bar(pct(dn,all.length))}<small class="mut">${dn} من ${all.length} مكتملة (${pct(dn,all.length)}%)</small></div>
+  <div class="row">${[['all','الكل'],['open','المتبقية'],['done','المكتملة']].map(f=>`<button class="chip ${fl==f[0]?'on':''}" data-a="fl" data-id="${f[0]}">${f[1]}</button>`).join('')}</div>
+  ${td.length?td.map(t=>row(t)).join(''):'<div class="empty">لا توجد مهام هنا. اضغطي «إضافة مهمة» لتبدئي يومك بخطوة 👣</div>'}</div>`}
+
+/* ============ التخطيط الأسبوعي ============ */
+function renderWeek(){
+  const cnt={};Object.keys(CAT).forEach(k=>cnt[k]=S.tasks.filter(t=>t.cat==k).length);
+  $('#p-week').innerHTML=`<h2>📅 التخطيط الأسبوعي</h2><div class="c" style="margin-bottom:12px"><div class="row sp"><div class="row">${Object.keys(CAT).map(k=>`<span class="chip">${CAT[k][0]} ${CAT[k][1]}: ${cnt[k]}</span>`).join('')}</div>
+  <div class="row np"><button class="b g" data-a="tpl">⚖️ قالب متوازن (نوم/راحة/ترفيه)</button><button class="b" data-a="print">🖨️ طباعة الجدول</button></div></div></div>
+  <div class="wk">${DAYS.map((d,i)=>`<div class="wd ${i==TD()?'td':''}"><h4>${d}<button class="b g np" data-a="add" data-day="${i}" title="إضافة">＋</button></h4>${S.tasks.filter(t=>t.day==i).sort(byTime).map(t=>`<div class="wt ${t.cat!='study'?t.cat:''} ${t.done?'done':''}" data-a="edit" data-id="${t.id}"><span data-a="tog" data-id="${t.id}">${t.done?'✅':'⬜'}</span><span>${t.time?'<b>'+t.time+'</b> ':''}${CAT[t.cat][0]} ${esc(t.title)}</span></div>`).join('')||'<small class="mut">لا مهام</small>'}</div>`).join('')}</div>`}
+
+/* ============ المساعد الذكي (منطق محلي بدون AI حقيقي) ============ */
+const MODES={pri:'الأولوية',easy:'الأقصر أولًا',hard:'الأطول أولًا',manual:'يدوي'};
+function parse(txt){return txt.split(/[\n,،؛;]+/).map(s=>s.trim()).filter(Boolean).map((s,i)=>{
+  let dur=0,m;
+  if(m=s.match(/(\d+(?:\.\d+)?)\s*(?:ساعات|ساعة|ساعه)/)){dur+=Math.round(m[1]*60);s=s.replace(m[0],'')}
+  if(m=s.match(/(\d+)\s*(?:دقيقة|دقائق|دقيقه|د)(?![\u0621-\u064A])/)){dur+=+m[1];s=s.replace(m[0],'')}
+  const hi=/!|امتحان|اختبار|غدا|غداً|عاجل|تسليم|كويز/.test(s),lo=/قراءة حرة|هواية|اختياري|ترتيب/.test(s);
+  s=s.replace(/!+/g,'').replace(/\s+/g,' ').trim();
+  const pri=hi?'high':lo?'low':'mid';
+  return {i,title:s||'مهمة',pri,dur:dur||{high:60,mid:45,low:30}[pri]}})}
+function sortPlan(){const p=S.plan,o={high:0,mid:1,low:2};
+  p.tasks.sort((a,b)=>(p.mode=='easy'?a.dur-b.dur:p.mode=='hard'?b.dur-a.dur:o[a.pri]-o[b.pri])||a.i-b.i)}
+function buildPlan(){const p=S.plan,end=toMin(p.st)+p.hrs*60;let t=toMin(p.st),run=0;p.items=[];p.later=[];
+  p.tasks.forEach((k,i)=>{let d=k.dur,left=end-t;
+    if(left<20){p.later.push(k.title);return}
+    let cut=false;if(d>left){d=left;cut=true}
+    p.items.push({k:'t',i,title:k.title,pri:k.pri,s:t,d,cut});t+=d;run+=d;
+    if(i<p.tasks.length-1&&end-t>=15){const b=run>=90?20:10;if(t+b<end){p.items.push({k:'b',title:b==20?'استراحة طويلة ☕':'استراحة قصيرة 🌿',s:t,d:b});t+=b;if(b==20)run=0}}});
+  while(p.items.length&&p.items[p.items.length-1].k=='b')p.items.pop()}
+function bot(t){S.chat.push({w:'b',t})}
+function reply(v){
+  let hrs=+$('#hrs').value||3,st=$('#st').value||'16:00',txt=v;
+  const hm=v.match(/(?:عندي|لدي|متاح|متاحة|وقتي)\s*(\d+(?:\.\d+)?)\s*(?:ساعات|ساعة|ساعه)/);
+  if(hm){hrs=+hm[1];txt=v.replace(hm[0],'')}
+  if(/^(مرحبا|هلا|السلام|اهلا|أهلا)/.test(v)&&!/\d/.test(v)){bot('أهلًا بكِ! 🌸 اكتبي مهامك (كل مهمة في سطر أو افصليها بفاصلة) مع مدتها إن أردتِ، مثل: رياضيات 45 دقيقة. استخدمي ! للمهمة العاجلة، وحدّدي الوقت المتاح من الأعلى.');return}
+  const tasks=parse(txt);
+  if(!tasks.length){bot('لم أجد مهام في رسالتك. جرّبي مثلًا: واجب الفيزياء 40 دقيقة، مراجعة الأحياء!');return}
+  S.plan={tasks,hrs,st,mode:'pri'};sortPlan();buildPlan();
+  bot(`رتّبت ${tasks.length} مهام خلال ${hrs} ساعات بدءًا من ${st}، مع فترات راحة قصيرة بين المهام وراحة أطول بعد 90 دقيقة دراسة. يمكنك إعادة الترتيب أو إضافتها لمهام اليوم 👇`+(S.plan.later.length?`\nلم يتسع الوقت لـ: ${S.plan.later.join('، ')}`:''))}
+function send(){const i=$('#ci'),v=i.value.trim();if(!v)return;i.value='';S.chat.push({w:'u',t:v});reply(v);save();renderAI()}
+function renderAI(){
+  if(!S.chat.length)bot('أهلًا بكِ في مساعد التخطيط 🌸 اكتبي مهامك وسأرتبها لكِ حسب الأولوية والوقت المتاح.');
+  const keep=$('#ci')?$('#ci').value:'',hv=$('#hrs')?$('#hrs').value:3,sv=$('#st')?$('#st').value:'16:00',p=S.plan;
+  $('#p-ai').innerHTML=`<h2>🤖 مساعد التخطيط الذكي</h2>
+  <div class="c"><p class="mut" style="margin-bottom:10px">ℹ️ هذا مساعد محلي يعتمد على منطق برمجي مؤقت داخل المتصفح، وليس نموذج ذكاء اصطناعي متصلًا بخدمة خارجية.</p>
+  <div class="row" style="margin-bottom:10px"><label>الوقت المتاح (ساعات)<input id="hrs" type="number" min="0.5" max="12" step="0.5" value="${hv}"></label><label>وقت البدء<input id="st" type="time" value="${sv}"></label></div>
+  <div class="chat" id="chat">${S.chat.map(m=>`<div class="m ${m.w=='b'?'bt':'u'}">${esc(m.t).replace(/\n/g,'<br>')}</div>`).join('')}</div>
+  <textarea id="ci" rows="3" placeholder="مثال:&#10;امتحان الكيمياء 60 دقيقة!&#10;واجب الرياضيات 40 دقيقة&#10;قراءة كتاب 30 دقيقة">${esc(keep)}</textarea>
+  <div class="row" style="margin-top:8px"><button class="b" data-a="send">إرسال ➤</button><button class="b g" data-a="ex">✍️ مثال جاهز</button><button class="b d" data-a="clrchat">مسح المحادثة</button></div></div>
+  ${p&&p.items?`<div class="c" style="margin-top:14px"><div class="row sp"><h3>🗓️ الجدول المقترح</h3><span class="chip">الترتيب: ${MODES[p.mode]}</span></div>
+  ${p.items.map(it=>`<div class="pi ${it.k=='b'?'br':''}"><b>${fm(it.s)}–${fm(it.s+it.d)}</b><span style="flex:1">${it.k=='t'?'<span style="color:'+PRI[it.pri][1]+'">●</span> ':''}${esc(it.title)}${it.cut?' <small>(مختصرة)</small>':''}</span>${it.k=='t'?`<button class="b g" data-a="pm" data-i="${it.i}" data-d="-1" aria-label="أعلى">↑</button><button class="b g" data-a="pm" data-i="${it.i}" data-d="1" aria-label="أسفل">↓</button>`:''}</div>`).join('')||'<div class="empty">لم يتسع الوقت. زيدي الساعات المتاحة.</div>'}
+  ${p.later.length?`<p class="mut" style="margin-top:8px">⏳ تأجلت: ${p.later.map(esc).join('، ')}</p>`:''}
+  <div class="row" style="margin-top:12px"><button class="b g" data-a="shuf">🔀 إعادة ترتيب</button><button class="b" data-a="addplan">➕ أضيفيها لمهام اليوم</button><button class="b d" data-a="clrplan">مسح الجدول</button></div></div>`:''}`;
+  const c=$('#chat');if(c)c.scrollTop=c.scrollHeight;
+  $('#ci').addEventListener('keydown',e=>{if(e.key=='Enter'&&!e.shiftKey){e.preventDefault();send()}})}
+
+/* ============ الأهداف ============ */
+function renderGoals(){
+  const gs=S.goals,ov=gs.length?Math.round(gs.reduce((a,g)=>a+Math.min(g.prog/g.target,1),0)/gs.length*100):0;
+  $('#p-goals').innerHTML=`<h2>🎯 الأهداف</h2><div class="c"><h3>➕ هدف جديد</h3><div class="row"><input id="gt" placeholder="مثال: حل 5 مسائل رياضيات" maxlength="80" style="flex:2;min-width:180px"><select id="gy" style="flex:1">${Object.keys(GT).map(k=>`<option value="${k}">${GT[k]}</option>`).join('')}</select><input id="gn" type="number" min="1" value="1" style="width:90px" aria-label="العدد المستهدف"><button class="b" data-a="gadd">إضافة</button></div></div>
+  <div class="c" style="margin:14px 0"><div class="row sp"><b>نسبة تحقيق الأهداف</b><b>${ov}%</b></div>${bar(ov)}</div>
+  <div class="grid">${Object.keys(GT).map(k=>`<div class="c"><h3>${{daily:'☀️',weekly:'📆',monthly:'🌙'}[k]} أهداف ${GT[k]}</h3>${gs.filter(g=>g.type==k).map(g=>{const v=pct(Math.min(g.prog,g.target),g.target);return `<div class="t" style="display:block"><div class="row sp"><b>${g.prog>=g.target?'🏅 ':''}${esc(g.title)}</b><button class="b d" data-a="gdel" data-id="${g.id}">🗑️</button></div>${bar(v)}<div class="row sp" style="margin-top:6px"><small class="mut">${g.prog} / ${g.target} (${v}%)</small><span class="row"><button class="b g" data-a="ginc" data-id="${g.id}" data-d="-1">−</button><button class="b g" data-a="ginc" data-id="${g.id}" data-d="1">+</button></span></div></div>`}).join('')||'<div class="empty">لا أهداف بعد</div>'}</div>`).join('')}</div>`}
+
+/* ============ الإحصائيات والإنجازات ============ */
+function renderStats(){
+  const T=S.tasks,dn=T.filter(t=>t.done).length,p=pct(dn,T.length),gd=S.goals.filter(g=>g.prog>=g.target).length;
+  const BAD=[[1,'🌱 الخطوة الأولى'],[5,'⭐ خمس مهام'],[10,'🔥 عشر مهام'],[25,'🏆 25 مهمة'],[50,'👑 50 مهمة']];
+  $('#p-stats').innerHTML=`<h2>📊 الإحصائيات والإنجازات</h2><div class="grid">
+  <div class="c"><h3>ملخص عام</h3><div class="row"><div class="ring" style="--v:${p}"><b>${p}%</b></div><div><p>✅ مكتملة: <b>${dn}</b></p><p>📝 كل المهام: <b>${T.length}</b></p><p>🎯 أهداف محققة: <b>${gd}</b> / ${S.goals.length}</p></div></div></div>
+  <div class="c"><h3>المهام حسب أيام الأسبوع</h3><div class="cols">${DAYS.map((d,i)=>{const a=T.filter(t=>t.day==i),c=a.filter(t=>t.done).length,mx=Math.max(1,...DAYS.map((_,j)=>T.filter(t=>t.day==j).length));return `<div title="${c}/${a.length}"><div class="tr"><i style="height:${a.length?c/mx*100:0}%"></i></div>${d.slice(0,3)}<br><small>${c}/${a.length}</small></div>`}).join('')}</div></div>
+  <div class="c"><h3>الإنجاز حسب النوع</h3>${Object.keys(CAT).map(k=>{const a=T.filter(t=>t.cat==k);return `<div style="margin-bottom:8px">${CAT[k][0]} ${CAT[k][1]} <small class="mut">(${a.filter(t=>t.done).length}/${a.length})</small>${bar(pct(a.filter(t=>t.done).length,a.length))}</div>`}).join('')}</div>
+  <div class="c"><h3>🏅 الأوسمة</h3>${BAD.map(b=>`<span class="bd ${dn>=b[0]?'':'lock'}">${b[1]}</span>`).join('')}<p class="mut">تُفتح الأوسمة حسب عدد المهام المكتملة.</p></div></div>
+  <div class="c" style="margin-top:14px"><h3>📜 سجل الإنجازات</h3>${S.log.slice(0,20).map(l=>`<div class="pi">🎉 <span style="flex:1">${esc(l.text)}</span><small class="mut">${dstr(l.date)}</small></div>`).join('')||'<div class="empty">سجلك فارغ الآن. أنجزي مهمة وسيظهر هنا!</div>'}</div>`}
+
+/* ============ النصائح ============ */
+function renderTips(){
+  $('#p-tips').innerHTML=`<h2>💡 نصائح التخطيط</h2><div class="row" style="margin-bottom:12px">${Object.keys(TCAT).map(k=>`<button class="chip ${tipCat==k?'on':''}" data-a="tc" data-id="${k}">${TCAT[k]}</button>`).join('')}</div>
+  <div class="grid">${TIPS.filter(t=>tipCat=='all'||t[0]==tipCat).map(t=>`<div class="c"><span class="chip">${TCAT[t[0]]}</span><p style="margin-top:8px">${t[1]}</p></div>`).join('')}</div>`}
+
+/* ============ التنقل والعرض ============ */
+const R={home:renderHome,daily:renderDaily,week:renderWeek,ai:renderAI,goals:renderGoals,stats:renderStats,tips:renderTips};
+let cur='home';
+function show(id){if(!R[id])id='home';cur=id;document.querySelectorAll('.pg').forEach(e=>e.classList.toggle('on',e.id=='p-'+id));
+  document.querySelectorAll('#nav button').forEach(b=>b.classList.toggle('on',b.dataset.id==id));R[id]();
+  try{history.replaceState(null,'','#'+id)}catch(e){}window.scrollTo({top:0})}
+function render(){R[cur]()}
+
+/* ============ نافذة المهمة ============ */
+function openT(id,day){
+  const t=S.tasks.find(x=>x.id==id)||{day:day??TD(),cat:'study',pri:'mid'},f=$('#tf').elements;
+  $('#dt').textContent=id?'تعديل المهمة':'مهمة جديدة';
+  f.tid.value=id||'';f.title.value=t.title||'';f.day.value=t.day;f.time.value=t.time||'';f.dur.value=t.dur||'';f.cat.value=t.cat;f.pri.value=t.pri;
+  $('#dlg').showModal();f.title.focus()}
+$('#tf').addEventListener('submit',e=>{e.preventDefault();const f=e.target.elements,title=f.title.value.trim();
+  if(!title){toast('اكتبي اسم المهمة أولًا');return}
+  const d={title,day:+f.day.value,time:f.time.value,dur:+f.dur.value||0,cat:f.cat.value,pri:f.pri.value};
+  if(f.tid.value)Object.assign(S.tasks.find(x=>x.id==f.tid.value),d);else S.tasks.push({id:uid(),done:false,...d});
+  save();$('#dlg').close();render();toast('تم الحفظ ✅')});
+
+/* ============ الأحداث ============ */
+const A={
+  go:b=>show(b.dataset.id),
+  close:()=>$('#dlg').close(),
+  add:b=>openT(null,b.dataset.day!==undefined?+b.dataset.day:undefined),
+  edit:b=>openT(b.dataset.id),
+  del:b=>{if(confirm('هل تريدين حذف هذه المهمة؟')){S.tasks=S.tasks.filter(t=>t.id!=b.dataset.id);S.log=S.log.filter(l=>l.tid!=b.dataset.id);save();render();toast('تم الحذف 🗑️')}},
+  tog:b=>{const id=b.dataset.id,t=S.tasks.find(x=>x.id==id);if(!t)return;t.done=!t.done;S.log=S.log.filter(l=>l.tid!=id);
+    if(t.done){S.log.unshift({tid:id,text:'أنجزتِ مهمة: '+t.title,date:Date.now()});toast('أحسنتِ! 🎉')}save();render()},
+  fl:b=>{fl=b.dataset.id;render()},
+  name:()=>{const v=$('#nm').value.trim();if(!v){toast('اكتبي اسمك');return}S.name=v;save();render()},
+  tip:()=>{tipIdx=Math.floor(Math.random()*TIPS.length);render()},
+  tc:b=>{tipCat=b.dataset.id;render()},
+  print:()=>window.print(),
+  tpl:()=>{let n=0;const add=(d,title,time,dur,cat)=>{if(!S.tasks.some(t=>t.day==d&&t.title==title)){S.tasks.push({id:uid(),done:false,title,day:d,time,dur,cat,pri:'low'});n++}};
+    for(let d=0;d<7;d++){add(d,'نوم','22:30',480,'sleep');add(d,'استراحة','17:00',30,'rest');if(d==4||d==5)add(d,'ترفيه','19:00',60,'fun')}
+    save();render();toast(n?`أُضيفت ${n} فقرات متوازنة`:'القالب مضاف مسبقًا')},
+  send,
+  ex:()=>{$('#ci').value='امتحان الكيمياء 60 دقيقة!\nواجب الرياضيات 40 دقيقة\nمراجعة الإنجليزي 30 دقيقة\nقراءة حرة 20 دقيقة';$('#ci').focus()},
+  clrchat:()=>{S.chat=[];save();renderAI()},
+  pm:b=>{const p=S.plan,i=+b.dataset.i,j=i+ +b.dataset.d;if(j<0||j>=p.tasks.length)return;[p.tasks[i],p.tasks[j]]=[p.tasks[j],p.tasks[i]];p.mode='manual';buildPlan();save();renderAI()},
+  shuf:()=>{const p=S.plan,o=['pri','easy','hard'];p.mode=o[(o.indexOf(p.mode)+1)%3];sortPlan();buildPlan();save();renderAI();toast('تمت إعادة الترتيب: '+MODES[p.mode])},
+  addplan:()=>{const p=S.plan;if(!p||!p.items.length)return;p.items.forEach(it=>S.tasks.push({id:uid(),done:false,title:it.title,day:TD(),time:fm(it.s),dur:it.d,cat:it.k=='b'?'rest':'study',pri:it.pri||'low'}));save();toast('أُضيف الجدول لمهام اليوم ✅');show('daily')},
+  clrplan:()=>{S.plan=null;save();renderAI()},
+  gadd:()=>{const t=$('#gt').value.trim(),n=Math.max(1,+$('#gn').value||1);if(!t){toast('اكتبي الهدف أولًا');return}
+    S.goals.push({id:uid(),title:t,type:$('#gy').value,target:n,prog:0,fin:false});save();render();toast('أُضيف الهدف 🎯')},
+  ginc:b=>{const g=S.goals.find(x=>x.id==b.dataset.id);if(!g)return;g.prog=Math.max(0,g.prog+ +b.dataset.d);
+    if(g.prog>=g.target&&!g.fin){g.fin=true;S.log.unshift({gid:g.id,text:'حققتِ هدفًا: '+g.title,date:Date.now()});toast('مبروك! حققتِ هدفك 🏅')}
+    if(g.prog<g.target&&g.fin){g.fin=false;S.log=S.log.filter(l=>l.gid!=g.id)}save();render()},
+  gdel:b=>{if(confirm('حذف هذا الهدف؟')){S.goals=S.goals.filter(g=>g.id!=b.dataset.id);S.log=S.log.filter(l=>l.gid!=b.dataset.id);save();render()}},
+  reset:()=>{if(confirm('سيتم حذف جميع بياناتك (المهام والأهداف والسجل). هل أنتِ متأكدة؟')){try{localStorage.removeItem(KEY)}catch(e){}S=blank();tipCat='all';fl='all';show('home');toast('تمت إعادة الضبط ♻️')}}
+};
+document.addEventListener('click',e=>{const b=e.target.closest('[data-a]');if(b&&A[b.dataset.a])A[b.dataset.a](b)});
+
+/* ============ التهيئة ============ */
+$('#nav').innerHTML=PAGES.map(p=>`<button data-a="go" data-id="${p[0]}"><span>${p[1]}</span>${p[2]}</button>`).join('');
+const f0=$('#tf').elements;
+f0.day.innerHTML=DAYS.map((d,i)=>`<option value="${i}">${d}</option>`).join('');
+f0.cat.innerHTML=Object.keys(CAT).map(k=>`<option value="${k}">${CAT[k][0]} ${CAT[k][1]}</option>`).join('');
+f0.pri.innerHTML=Object.keys(PRI).map(k=>`<option value="${k}">${PRI[k][0]}</option>`).join('');
+show(location.hash.slice(1)||'home');
+</script>
+</body>
+</html>
